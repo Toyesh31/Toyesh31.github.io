@@ -1,0 +1,19 @@
+body{
+    background-image: linear-gradient(#1997b0,#145482) ;
+}
+footer{
+ background-color: #0e3857; 
+ color: aliceblue;  
+}
+.offwhite{
+    background-color: #b6c2cc;
+}
+.name{
+    text-align: center;
+    font-size: 5em;
+    font-family: serif;
+    font-weight: bolder;
+}
+.music{
+    color: #ffffff;
+}

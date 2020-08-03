@@ -1,0 +1,138 @@
+<!-- 1:to improve the nav bar(optional or remove it) 
+2: Develop broswe  time button -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Clock</title>
+    <script>
+        let a;
+        let time;
+        let date;
+        let hr;
+        const options = {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        };
+        setInterval(() => {
+            a = new Date();
+            date = a.toLocaleDateString(undefined, options);
+            hr = a.getHours();
+            if (hr > 12) {
+                hr = hr % 12;
+                time = hr + ':' + a.getMinutes() + ":" + a.getSeconds();
+                document.getElementById('time').innerHTML = time + " PM" + "  on date  \n" + date;
+            } else if (hr < 12) {
+                time = hr + ':' + a.getMinutes() + ":" + a.getSeconds();
+                document.getElementById('time').innerHTML = time + " AM" + "  on date  \n" + date;
+            }
+        }, 1000);
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Intrests
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="tech.html">Technical</a>
+                        <a class="dropdown-item" href="nontech.html">Non-Technical</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="project.html" role="button">Projects</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+
+    <div class="container my-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb offwhite">
+                <li class="breadcrumb-item"><a href="project.html">Projects</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Clock</li>
+            </ol>
+        </nav>
+        <div class="jumbotron offwhite">
+            <h1 class="display-4">Current Time is:- <span id="time"></span></h1>
+        </div>
+    </div>
+    <hr>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 offset-1 col-sm-6">
+                    <h5>Address</h5>
+                    <address>
+                        D-198,KoelNagar<br>
+                        Rourkela, Odisha<br>
+                        769014<br>
+                        <i class="fa fa-phone fa-lg"></i> Tel 1: +91-8018770121<br>
+                        <i class="fa fa-phone fa-lg"></i> Tel 2: +91-6370906071<br>
+                        <i class="fa fa-envelope fa-lg"></i> Email: <a
+                            href="mailto:tdashjitu@gmail.com">tdashjitu@gmail.com</a>
+                    </address>
+                </div>
+                <div class="col-12 col-sm-5 align-self-center">
+                    <div class="text-center">
+                        <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i
+                                class="fa fa-google-plus fa-lg"></i></a>
+                        <a class="btn btn-social-icon btnfacebook" href="http://www.facebook.com/profile.php?id="><i
+                                class="fa fa-facebook fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i
+                                class="fa fa-linkedin fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i
+                                class="fa fa-twitter fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i
+                                class="fa fa-youtube fa-lg"></i></a>
+                        <a class="btn btn-social-icon " href="mailto:tdashjitu@gmail.com"><i
+                                class="fa fa-envelope-o fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
