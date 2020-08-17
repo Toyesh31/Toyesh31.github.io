@@ -17,3 +17,19 @@ footer{
 .music{
     color: #ffffff;
 }
+
+.sociallink a{
+	color: white;
+}
+.sociallink a:nth-child(2):hover, .sociallink a:nth-child(3):hover, .sociallink a:nth-child(4):hover{
+	color: #00AAAA;
+}
+.sociallink a:nth-child(5):hover, .sociallink a:nth-child(1):hover{/* You can add .sociallink a:nth-child(7):hover if you want mail here*/
+	color: red;
+}
+.sociallink a:nth-child(6):hover{
+	color: #00AA55;
+}
+.sociallink i{
+	font-size: 28px;
+}
